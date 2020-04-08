@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Vue.Js 第四天--layout布局 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Vue.js学习笔记.layout布局">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue.Js 第四天--layout布局">
+<meta property="og:url" content="http://yoursite.com/2019/09/23/Vue.Js%20%E7%AC%AC%E5%9B%9B%E5%A4%A9/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Vue.js学习笔记.layout布局">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-09-23T10:53:52.000Z">
+<meta property="article:modified_time" content="2019-09-26T08:30:18.107Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Vue.Js">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Vue.Js 第四天" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/23/Vue.Js%20%E7%AC%AC%E5%9B%9B%E5%A4%A9/" class="article-date">
+  <time datetime="2019-09-23T10:53:52.000Z" itemprop="datePublished">2019-09-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Vue.Js 第四天--layout布局
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Vue-Js-第四天–layout布局"><a href="#Vue-Js-第四天–layout布局" class="headerlink" title="Vue.Js 第四天–layout布局"></a>Vue.Js 第四天–layout布局</h1><h2 id="前置技能"><a href="#前置技能" class="headerlink" title="前置技能"></a>前置技能</h2><p><strong>row 行概念</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-row</span> <span class="attr">span</span> = <span class="string">"24"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-row</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--这就是占全部的写法--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>col 列概念</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-col</span> <span class="attr">span</span>=<span class="string">"12"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-col</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--这就是占一半的写法--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>layout布局就是一行分成24格,这样便于布局.用span来控制占多少格.</p>
+<h2 id="实现混合布局"><a href="#实现混合布局" class="headerlink" title="实现混合布局"></a>实现混合布局</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-row &gt;</span><br><span class="line">  &lt;!-- col是列 row是列 --&gt;</span><br><span class="line">  &lt;el-row &gt;</span><br><span class="line">    &lt;el-col :span&#x3D;&quot;24&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;grid-content bg-purple-dark&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-col&gt;</span><br><span class="line">  &lt;&#x2F;el-row&gt;</span><br><span class="line">  &lt;el-row :gutter&#x3D;&quot;10&quot;&gt;</span><br><span class="line">    &lt;el-col :span&#x3D;&quot;8&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;grid-content bg-purple&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-col&gt;</span><br><span class="line">    &lt;el-col :span&#x3D;&quot;8&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;grid-content bg-purple-light&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-col&gt;</span><br><span class="line">    &lt;el-col :span&#x3D;&quot;8&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;grid-content bg-purple&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-col&gt;</span><br><span class="line">  &lt;&#x2F;el-row&gt;</span><br><span class="line">  &lt;el-row&gt;</span><br><span class="line">    &lt;el-col :span&#x3D;&quot;6&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;grid-content bg-purple&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-col&gt;</span><br><span class="line">    &lt;el-col :span&#x3D;&quot;6&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;grid-content bg-purple-light&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-col&gt;</span><br><span class="line">    &lt;el-col :span&#x3D;&quot;6&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;grid-content bg-purple&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-col&gt;</span><br><span class="line">    &lt;el-col :span&#x3D;&quot;6&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;grid-content bg-purple-light&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-col&gt;</span><br><span class="line">  &lt;&#x2F;el-row&gt;</span><br><span class="line">  &lt;el-row&gt;</span><br><span class="line">    &lt;el-col :span&#x3D;&quot;4&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;grid-content bg-purple&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-col&gt;</span><br><span class="line">    &lt;el-col :span&#x3D;&quot;4&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;grid-content bg-purple-light&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-col&gt;</span><br><span class="line">    &lt;el-col :span&#x3D;&quot;4&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;grid-content bg-purple&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-col&gt;</span><br><span class="line">    &lt;el-col :span&#x3D;&quot;4&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;grid-content bg-purple-light&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-col&gt;</span><br><span class="line">    &lt;el-col :span&#x3D;&quot;4&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;grid-content bg-purple&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-col&gt;</span><br><span class="line">    &lt;el-col :span&#x3D;&quot;4&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;grid-content bg-purple-light&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-col&gt;</span><br><span class="line">  &lt;&#x2F;el-row&gt;</span><br><span class="line">  &lt;el-col :xs&#x3D;&quot;4&quot; :sm&#x3D;&quot;6&quot; :md&#x3D;&quot;4&quot; :lg&#x3D;&quot;3&quot; :xl&#x3D;&quot;1&quot;&gt;</span><br><span class="line">    &lt;el-form&gt;</span><br><span class="line">      &lt;el-button @click&#x3D;&quot;onc&quot;&gt;didi&lt;&#x2F;el-button&gt;</span><br><span class="line">    &lt;&#x2F;el-form&gt;</span><br><span class="line">  &lt;&#x2F;el-col&gt;</span><br><span class="line">  &lt;&#x2F;el-row&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Col-Attributes"><a href="#Col-Attributes" class="headerlink" title="Col Attributes"></a>Col Attributes</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>可选值</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>span</td>
+<td>栅格占据的列数</td>
+<td>number</td>
+<td>—</td>
+<td>24</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>栅格左侧的间隔格数</td>
+<td>number</td>
+<td>—</td>
+<td>0</td>
+</tr>
+<tr>
+<td>push</td>
+<td>栅格向右移动格数</td>
+<td>number</td>
+<td>—</td>
+<td>0</td>
+</tr>
+<tr>
+<td>pull</td>
+<td>栅格向左移动格数</td>
+<td>number</td>
+<td>—</td>
+<td>0</td>
+</tr>
+<tr>
+<td>xs</td>
+<td><code>&lt;768px</code> 响应式栅格数或者栅格属性对象</td>
+<td>number/object (例如： {span: 4, offset: 4})</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>sm</td>
+<td><code>≥768px</code> 响应式栅格数或者栅格属性对象</td>
+<td>number/object (例如： {span: 4, offset: 4})</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>md</td>
+<td><code>≥992px</code> 响应式栅格数或者栅格属性对象</td>
+<td>number/object (例如： {span: 4, offset: 4})</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>lg</td>
+<td><code>≥1200px</code> 响应式栅格数或者栅格属性对象</td>
+<td>number/object (例如： {span: 4, offset: 4})</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>xl</td>
+<td><code>≥1920px</code> 响应式栅格数或者栅格属性对象</td>
+<td>number/object (例如： {span: 4, offset: 4})</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>tag</td>
+<td>自定义元素标签</td>
+<td>string</td>
+<td>*</td>
+<td>div</td>
+</tr>
+</tbody></table>
+<p>xs,sm,md,lg,xl是参照了 Bootstrap 的 响应式设计尺寸.</p>
+<p>span是实现24layout布局的比例分割.</p>
+<p>offset实现中间间隔.</p>
+<h3 id="Row-Attributes"><a href="#Row-Attributes" class="headerlink" title="Row Attributes"></a>Row Attributes</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>可选值</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>gutter</td>
+<td>栅格间隔</td>
+<td>number</td>
+<td>—</td>
+<td>0</td>
+</tr>
+<tr>
+<td>type</td>
+<td>布局模式，可选 flex，现代浏览器下有效</td>
+<td>string</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>justify</td>
+<td>flex 布局下的水平排列方式</td>
+<td>string</td>
+<td>start/end/center/space-around/space-between</td>
+<td>start</td>
+</tr>
+<tr>
+<td>align</td>
+<td>flex 布局下的垂直排列方式</td>
+<td>string</td>
+<td>top/middle/bottom</td>
+<td>top</td>
+</tr>
+<tr>
+<td>tag</td>
+<td>自定义元素标签</td>
+<td>string</td>
+<td>*</td>
+<td>div</td>
+</tr>
+</tbody></table>
+<p>gutter每一个单位 大小是 0.5px,</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/23/Vue.Js%20%E7%AC%AC%E5%9B%9B%E5%A4%A9/" data-id="ck8r41r39000dy8tb4636dw8f" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-Js/" rel="tag">Vue.Js</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/09/24/Vue.Js%20%E7%AC%AC%E4%BA%94%E5%A4%A9--%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Vue.Js 第五天--布局容器
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/22/Vue.Js%20%E7%AC%AC%E4%B8%89%E5%A4%A9--element%E5%9F%BA%E7%A1%80%E6%90%AD%E5%BB%BA/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Vue.Js 第三天--element基础搭建</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-Js/" rel="tag">Vue.Js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-Js-Vuex/" rel="tag">Vue.Js Vuex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%B2%E5%BA%A7%EF%BC%9B%E5%B0%B1%E4%B8%9A/" rel="tag">讲座；就业</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Vue-Js/" style="font-size: 20px;">Vue.Js</a> <a href="/tags/Vue-Js-Vuex/" style="font-size: 10px;">Vue.Js Vuex</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 10px;">数据结构与算法</a> <a href="/tags/%E8%AE%B2%E5%BA%A7%EF%BC%9B%E5%B0%B1%E4%B8%9A/" style="font-size: 10px;">讲座；就业</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/08/20200408/">20200408</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/11/vueX/">Vue.js学习笔记.VueX运用</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/30/1030%E5%B0%B1%E4%B8%9A%E8%AE%B2%E5%BA%A7/">10月30日就业知识讲座(萍乡学院音乐厅)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/26/%E7%AE%97%E6%B3%95-1-%E6%A0%88%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">算法-1- 栈的快速排序</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/24/Vue.Js%20%E7%AC%AC%E4%BA%94%E5%A4%A9--%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8/">Vue.Js 第五天--布局容器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

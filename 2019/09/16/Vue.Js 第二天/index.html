@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Vue.Js 第二天 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Vue.js学习笔记.模板语法运用2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue.Js 第二天">
+<meta property="og:url" content="http://yoursite.com/2019/09/16/Vue.Js%20%E7%AC%AC%E4%BA%8C%E5%A4%A9/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Vue.js学习笔记.模板语法运用2">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-09-16T08:07:52.000Z">
+<meta property="article:modified_time" content="2019-09-26T08:30:06.120Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Vue.Js">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Vue.Js 第二天" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/16/Vue.Js%20%E7%AC%AC%E4%BA%8C%E5%A4%A9/" class="article-date">
+  <time datetime="2019-09-16T08:07:52.000Z" itemprop="datePublished">2019-09-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Vue.Js 第二天
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Vue-Js-第二天"><a href="#Vue-Js-第二天" class="headerlink" title="Vue.Js 第二天"></a>Vue.Js 第二天</h1><h2 id="1-模板语法"><a href="#1-模板语法" class="headerlink" title="1.模板语法"></a>1.模板语法</h2><h3 id="2-1指令"><a href="#2-1指令" class="headerlink" title="2.1指令"></a>2.1指令</h3><p><strong>指令 (Directives) 是带有 <code>v-</code> 前缀的特殊特性。指令的职责是，当表达式的值改变时，将其产生的连带影响，响应式地作用于 DOM。</strong></p>
+<h4 id="2-1-1指令的参数"><a href="#2-1-1指令的参数" class="headerlink" title="2.1.1指令的参数"></a>2.1.1指令的参数</h4><p>一些指令能够接收一个“参数”，在指令名称之后以冒号表示。例如，<code>v-bind</code> 指令可以用于响应式地更新 HTML 特性：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">"url"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在这里 <code>href</code> 是参数，告知 <code>v-bind</code> 指令将该元素的 <code>href</code> 特性与表达式 <code>url</code> 的值绑定。</p>
+<p>另一个例子是 <code>v-on</code> 指令，它用于监听 DOM 事件：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click</span>=<span class="string">"doSomething"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">a</span>&gt;</span>/* 相当于是加载不同的方法*/</span><br></pre></td></tr></table></figure>
+
+<p><strong>动态的设置一些值</strong></p>
+<h4 id="2-1-2动态参数"><a href="#2-1-2动态参数" class="headerlink" title="2.1.2动态参数"></a>2.1.2动态参数</h4><p>从 2.6.0 开始，可以用方括号括起来的 JavaScript 表达式作为一个指令的参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a v-bind:[attributeName]&#x3D;&quot;url&quot;&gt; ... &lt;&#x2F;a&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这里的 <code>attributeName</code> 会被作为一个 JavaScript 表达式进行动态求值，求得的值将会作为最终的参数来使用。例如，如果你的 Vue 实例有一个 <code>data</code> 属性 <code>attributeName</code>，其值为 <code>&quot;href&quot;</code>，那么这个绑定将等价于 <code>v-bind:href</code>。</p>
+<p>同样地，你可以使用动态参数为一个动态的事件名绑定处理函数：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:</span>[<span class="attr">eventName</span>]=<span class="string">"doSomething"</span>&gt;</span> ... <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>同样地，当 <code>eventName</code> 的值为 <code>&quot;focus&quot;</code> 时，<code>v-on:[eventName]</code> 将等价于 <code>v-on:focus</code>。</p>
+<p>动态参数预期会求出一个字符串，异常情况下值为 <code>null</code>。这个特殊的 <code>null</code> 值可以被显性地用于移除绑定。任何其它非字符串类型的值都将会触发一个警告。</p>
+<p>​                                                        <strong>属性的键可变</strong></p>
+<h4 id="2-1-3修饰符"><a href="#2-1-3修饰符" class="headerlink" title="2.1.3修饰符"></a>2.1.3修饰符</h4><p>修饰符 (modifier) 是以半角句号 <code>.</code> 指明的特殊后缀，用于指出一个指令应该以特殊方式绑定。例如，<code>.prevent</code> 修饰符告诉 <code>v-on</code> 指令对于触发的事件调用 <code>event.preventDefault()</code>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">v-on:submit.prevent</span>=<span class="string">"onSubmit"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>submit调用prevent方法。修饰符就是让submit（属性）调用其他方法。</strong></p>
+<h4 id="2-1-3缩写"><a href="#2-1-3缩写" class="headerlink" title="2.1.3缩写"></a>2.1.3缩写</h4><p><strong><code>v-bind</code> 缩写</strong></p>
+<p><strong>v-bind 动态地绑定一个或多个特性、或一个组件 prop 到表达式。</strong> </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 完整语法 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">"url"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 缩写 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">"url"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong><code>v-on</code> 缩写</strong></p>
+<p><strong>v-on 监听DOM事件 形式如：v-on:click  缩写为 @click;</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 完整语法 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click</span>=<span class="string">"doSomething"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 缩写 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> @<span class="attr">click</span>=<span class="string">"doSomething"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>常用的两个用法</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/16/Vue.Js%20%E7%AC%AC%E4%BA%8C%E5%A4%A9/" data-id="ck8r41r340005y8tb895iak05" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-Js/" rel="tag">Vue.Js</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/09/22/Vue.Js%20%E7%AC%AC%E4%B8%89%E5%A4%A9--element%E5%9F%BA%E7%A1%80%E6%90%AD%E5%BB%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Vue.Js 第三天--element基础搭建
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Vue.Js 第一天</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-Js/" rel="tag">Vue.Js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-Js-Vuex/" rel="tag">Vue.Js Vuex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%B2%E5%BA%A7%EF%BC%9B%E5%B0%B1%E4%B8%9A/" rel="tag">讲座；就业</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Vue-Js/" style="font-size: 20px;">Vue.Js</a> <a href="/tags/Vue-Js-Vuex/" style="font-size: 10px;">Vue.Js Vuex</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 10px;">数据结构与算法</a> <a href="/tags/%E8%AE%B2%E5%BA%A7%EF%BC%9B%E5%B0%B1%E4%B8%9A/" style="font-size: 10px;">讲座；就业</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/08/20200408/">20200408</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/11/vueX/">Vue.js学习笔记.VueX运用</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/30/1030%E5%B0%B1%E4%B8%9A%E8%AE%B2%E5%BA%A7/">10月30日就业知识讲座(萍乡学院音乐厅)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/26/%E7%AE%97%E6%B3%95-1-%E6%A0%88%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">算法-1- 栈的快速排序</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/24/Vue.Js%20%E7%AC%AC%E4%BA%94%E5%A4%A9--%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8/">Vue.Js 第五天--布局容器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
