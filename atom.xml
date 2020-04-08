@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>MrDust Blog</title>
   
-  
+  <subtitle>love is love</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://blog.mrdust.com/"/>
   <updated>2020-04-08T08:50:08.956Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://blog.mrdust.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>MrDust</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>20200408</title>
-    <link href="http://yoursite.com/2020/04/08/20200408/"/>
-    <id>http://yoursite.com/2020/04/08/20200408/</id>
+    <link href="http://blog.mrdust.com/2020/04/08/20200408/"/>
+    <id>http://blog.mrdust.com/2020/04/08/20200408/</id>
     <published>2020-04-08T09:08:38.414Z</published>
     <updated>2020-04-08T08:50:08.956Z</updated>
     
@@ -40,8 +40,8 @@
   
   <entry>
     <title>Vue.js学习笔记.VueX运用</title>
-    <link href="http://yoursite.com/2019/11/11/vueX/"/>
-    <id>http://yoursite.com/2019/11/11/vueX/</id>
+    <link href="http://blog.mrdust.com/2019/11/11/vueX/"/>
+    <id>http://blog.mrdust.com/2019/11/11/vueX/</id>
     <published>2019-11-11T11:57:52.000Z</published>
     <updated>2019-11-11T12:37:55.087Z</updated>
     
@@ -55,14 +55,14 @@
     
     
     
-      <category term="Vue.Js Vuex" scheme="http://yoursite.com/tags/Vue-Js-Vuex/"/>
+      <category term="Vue.Js Vuex" scheme="http://blog.mrdust.com/tags/Vue-Js-Vuex/"/>
     
   </entry>
   
   <entry>
     <title>10月30日就业知识讲座(萍乡学院音乐厅)</title>
-    <link href="http://yoursite.com/2019/10/30/1030%E5%B0%B1%E4%B8%9A%E8%AE%B2%E5%BA%A7/"/>
-    <id>http://yoursite.com/2019/10/30/1030%E5%B0%B1%E4%B8%9A%E8%AE%B2%E5%BA%A7/</id>
+    <link href="http://blog.mrdust.com/2019/10/30/1030%E5%B0%B1%E4%B8%9A%E8%AE%B2%E5%BA%A7/"/>
+    <id>http://blog.mrdust.com/2019/10/30/1030%E5%B0%B1%E4%B8%9A%E8%AE%B2%E5%BA%A7/</id>
     <published>2019-10-30T13:33:36.000Z</published>
     <updated>2019-10-30T15:00:23.508Z</updated>
     
@@ -76,14 +76,14 @@
     
     
     
-      <category term="讲座；就业" scheme="http://yoursite.com/tags/%E8%AE%B2%E5%BA%A7%EF%BC%9B%E5%B0%B1%E4%B8%9A/"/>
+      <category term="讲座；就业" scheme="http://blog.mrdust.com/tags/%E8%AE%B2%E5%BA%A7%EF%BC%9B%E5%B0%B1%E4%B8%9A/"/>
     
   </entry>
   
   <entry>
     <title>算法-1- 栈的快速排序</title>
-    <link href="http://yoursite.com/2019/09/26/%E7%AE%97%E6%B3%95-1-%E6%A0%88%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
-    <id>http://yoursite.com/2019/09/26/%E7%AE%97%E6%B3%95-1-%E6%A0%88%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</id>
+    <link href="http://blog.mrdust.com/2019/09/26/%E7%AE%97%E6%B3%95-1-%E6%A0%88%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
+    <id>http://blog.mrdust.com/2019/09/26/%E7%AE%97%E6%B3%95-1-%E6%A0%88%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</id>
     <published>2019-09-26T08:23:52.000Z</published>
     <updated>2019-09-26T08:32:17.689Z</updated>
     
@@ -97,14 +97,14 @@
     
     
     
-      <category term="数据结构与算法" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="http://blog.mrdust.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>Vue.Js 第五天--布局容器</title>
-    <link href="http://yoursite.com/2019/09/24/Vue.Js%20%E7%AC%AC%E4%BA%94%E5%A4%A9--%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8/"/>
-    <id>http://yoursite.com/2019/09/24/Vue.Js%20%E7%AC%AC%E4%BA%94%E5%A4%A9--%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8/</id>
+    <link href="http://blog.mrdust.com/2019/09/24/Vue.Js%20%E7%AC%AC%E4%BA%94%E5%A4%A9--%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8/"/>
+    <id>http://blog.mrdust.com/2019/09/24/Vue.Js%20%E7%AC%AC%E4%BA%94%E5%A4%A9--%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8/</id>
     <published>2019-09-24T01:40:52.000Z</published>
     <updated>2019-09-26T08:30:23.358Z</updated>
     
@@ -118,14 +118,14 @@
     
     
     
-      <category term="Vue.Js" scheme="http://yoursite.com/tags/Vue-Js/"/>
+      <category term="Vue.Js" scheme="http://blog.mrdust.com/tags/Vue-Js/"/>
     
   </entry>
   
   <entry>
     <title>Vue.Js 第四天--layout布局</title>
-    <link href="http://yoursite.com/2019/09/23/Vue.Js%20%E7%AC%AC%E5%9B%9B%E5%A4%A9/"/>
-    <id>http://yoursite.com/2019/09/23/Vue.Js%20%E7%AC%AC%E5%9B%9B%E5%A4%A9/</id>
+    <link href="http://blog.mrdust.com/2019/09/23/Vue.Js%20%E7%AC%AC%E5%9B%9B%E5%A4%A9/"/>
+    <id>http://blog.mrdust.com/2019/09/23/Vue.Js%20%E7%AC%AC%E5%9B%9B%E5%A4%A9/</id>
     <published>2019-09-23T10:53:52.000Z</published>
     <updated>2019-09-26T08:30:18.107Z</updated>
     
@@ -139,14 +139,14 @@
     
     
     
-      <category term="Vue.Js" scheme="http://yoursite.com/tags/Vue-Js/"/>
+      <category term="Vue.Js" scheme="http://blog.mrdust.com/tags/Vue-Js/"/>
     
   </entry>
   
   <entry>
     <title>Vue.Js 第三天--element基础搭建</title>
-    <link href="http://yoursite.com/2019/09/22/Vue.Js%20%E7%AC%AC%E4%B8%89%E5%A4%A9--element%E5%9F%BA%E7%A1%80%E6%90%AD%E5%BB%BA/"/>
-    <id>http://yoursite.com/2019/09/22/Vue.Js%20%E7%AC%AC%E4%B8%89%E5%A4%A9--element%E5%9F%BA%E7%A1%80%E6%90%AD%E5%BB%BA/</id>
+    <link href="http://blog.mrdust.com/2019/09/22/Vue.Js%20%E7%AC%AC%E4%B8%89%E5%A4%A9--element%E5%9F%BA%E7%A1%80%E6%90%AD%E5%BB%BA/"/>
+    <id>http://blog.mrdust.com/2019/09/22/Vue.Js%20%E7%AC%AC%E4%B8%89%E5%A4%A9--element%E5%9F%BA%E7%A1%80%E6%90%AD%E5%BB%BA/</id>
     <published>2019-09-22T08:03:52.000Z</published>
     <updated>2019-09-26T08:30:12.383Z</updated>
     
@@ -160,14 +160,14 @@
     
     
     
-      <category term="Vue.Js" scheme="http://yoursite.com/tags/Vue-Js/"/>
+      <category term="Vue.Js" scheme="http://blog.mrdust.com/tags/Vue-Js/"/>
     
   </entry>
   
   <entry>
     <title>Vue.Js 第二天</title>
-    <link href="http://yoursite.com/2019/09/16/Vue.Js%20%E7%AC%AC%E4%BA%8C%E5%A4%A9/"/>
-    <id>http://yoursite.com/2019/09/16/Vue.Js%20%E7%AC%AC%E4%BA%8C%E5%A4%A9/</id>
+    <link href="http://blog.mrdust.com/2019/09/16/Vue.Js%20%E7%AC%AC%E4%BA%8C%E5%A4%A9/"/>
+    <id>http://blog.mrdust.com/2019/09/16/Vue.Js%20%E7%AC%AC%E4%BA%8C%E5%A4%A9/</id>
     <published>2019-09-16T08:07:52.000Z</published>
     <updated>2019-09-26T08:30:06.120Z</updated>
     
@@ -181,14 +181,14 @@
     
     
     
-      <category term="Vue.Js" scheme="http://yoursite.com/tags/Vue-Js/"/>
+      <category term="Vue.Js" scheme="http://blog.mrdust.com/tags/Vue-Js/"/>
     
   </entry>
   
   <entry>
     <title>Vue.Js 第一天</title>
-    <link href="http://yoursite.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/"/>
-    <id>http://yoursite.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/</id>
+    <link href="http://blog.mrdust.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/"/>
+    <id>http://blog.mrdust.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/</id>
     <published>2019-09-15T01:07:52.000Z</published>
     <updated>2019-09-26T08:30:29.732Z</updated>
     
@@ -202,7 +202,7 @@
     
     
     
-      <category term="Vue.Js" scheme="http://yoursite.com/tags/Vue-Js/"/>
+      <category term="Vue.Js" scheme="http://blog.mrdust.com/tags/Vue-Js/"/>
     
   </entry>
   

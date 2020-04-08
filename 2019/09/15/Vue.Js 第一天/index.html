@@ -1,95 +1,202 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
+    
 
-  
-  <title>Vue.Js 第一天 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Vue.js学习笔记.模板语法运用.">
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Vue.Js 第一天 | MrDust Blog | love is love</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Vue.Js">
+    <meta name="description" content="Vue.js学习笔记.模板语法运用.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue.Js 第一天">
-<meta property="og:url" content="http://yoursite.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="http://blog.mrdust.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/index.html">
+<meta property="og:site_name" content="MrDust Blog">
 <meta property="og:description" content="Vue.js学习笔记.模板语法运用.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-09-15T01:07:52.000Z">
 <meta property="article:modified_time" content="2019-09-26T08:30:29.732Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="MrDust">
 <meta property="article:tag" content="Vue.Js">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+    
+        <link rel="alternate" type="application/atom+xml" title="MrDust Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
 
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">MrDust</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
       </div>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-Vue.Js 第一天" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/" class="article-date">
-  <time datetime="2019-09-15T01:07:52.000Z" itemprop="datePublished">2019-09-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
         
-  
-    <h1 class="article-title" itemprop="name">
-      Vue.Js 第一天
-    </h1>
-  
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
 
-      </header>
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Vue.Js 第一天</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Vue.Js 第一天</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-09-15T01:07:52.000Z" itemprop="datePublished" class="page-time">
+  2019-09-15
+</time>
+
+
+            
+        </h5>
+    </div>
+
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Vue-Js-第一天"><a href="#Vue-Js-第一天" class="headerlink" title="Vue.Js 第一天"></a>Vue.Js 第一天</h1><h2 id="1-模板语法"><a href="#1-模板语法" class="headerlink" title="1.模板语法"></a>1.模板语法</h2><h3 id="核心"><a href="#核心" class="headerlink" title="核心"></a><strong>核心</strong></h3><p>Vue 将模板编译成虚拟 DOM 渲染函数。结合响应系统，Vue 能够智能地计算出最少需要重新渲染多少组件，并把 DOM 操作次数减到最少。</p>
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Vue-Js-第一天"><span class="post-toc-number">1.</span> <span class="post-toc-text">Vue.Js 第一天</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-模板语法"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.模板语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#核心"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">核心</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1插入值"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">1.1插入值</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-1插入文本"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">1.1.1插入文本</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-2插入HTML"><span class="post-toc-number">1.1.2.2.</span> <span class="post-toc-text">1.1.2插入HTML</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-3插入JavaScript表达式"><span class="post-toc-number">1.1.2.3.</span> <span class="post-toc-text">1.1.3插入JavaScript表达式</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-2指令"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">1.2指令</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2-1参数"><span class="post-toc-number">1.1.3.1.</span> <span class="post-toc-text">1.2.1参数</span></a></li></ol></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Vue.Js 第一天"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Vue.Js 第一天</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-09-15 09:07:52" datetime="2019-09-15T01:07:52.000Z"  itemprop="datePublished">2019-09-15</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Vue-Js-第一天"><a href="#Vue-Js-第一天" class="headerlink" title="Vue.Js 第一天"></a>Vue.Js 第一天</h1><h2 id="1-模板语法"><a href="#1-模板语法" class="headerlink" title="1.模板语法"></a>1.模板语法</h2><h3 id="核心"><a href="#核心" class="headerlink" title="核心"></a><strong>核心</strong></h3><p>Vue 将模板编译成虚拟 DOM 渲染函数。结合响应系统，Vue 能够智能地计算出最少需要重新渲染多少组件，并把 DOM 操作次数减到最少。</p>
 <p>&lt; !– more –&gt;</p>
 <h3 id="1-1插入值"><a href="#1-1插入值" class="headerlink" title="1.1插入值"></a>1.1插入值</h3><h4 id="1-1-1插入文本"><a href="#1-1-1插入文本" class="headerlink" title="1.1.1插入文本"></a>1.1.1插入文本</h4><p>数据绑定最常见的形式就是使用“Mustache”语法 (双大括号) 的文本插值：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Message: &#123;&#123; msg &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -113,141 +220,299 @@
 <p><strong>在一段JavaScript表达式里只能绑定一个数据,考虑使用三元表达式或者分开写</strong></p>
 <h3 id="1-2指令"><a href="#1-2指令" class="headerlink" title="1.2指令"></a>1.2指令</h3><p><strong>指令是 带 <code>v-</code>前缀的代码,指令的职责是，当表达式的值改变时，将其产生的连带影响，响应式地作用于 DOM。</strong></p>
 <h4 id="1-2-1参数"><a href="#1-2-1参数" class="headerlink" title="1.2.1参数"></a>1.2.1参数</h4>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/" data-id="ck8r41r2t0000y8tbcc2shhsv" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-Js/" rel="tag">Vue.Js</a></li></ul>
+        </div>
 
-    </footer>
-  </div>
-  
+        <blockquote class="post-copyright">
     
-<nav id="article-nav">
-  
-    <a href="/2019/09/16/Vue.Js%20%E7%AC%AC%E4%BA%8C%E5%A4%A9/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
+    <div class="content">
         
-          Vue.Js 第二天
+<span class="post-time">
+    Last updated: <time datetime="2019-09-26T08:30:29.732Z" itemprop="dateUpdated">2019-09-26 16:30:29</time>
+</span><br>
+
+
         
-      </div>
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/" target="_blank" rel="external">http://blog.mrdust.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://blog.mrdust.com">
+            <img src="/img/avatar.jpg" alt="MrDust">
+            MrDust
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-Js/" rel="tag">Vue.Js</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.mrdust.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/&title=《Vue.Js 第一天》 — MrDust Blog&pic=http://blog.mrdust.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.mrdust.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/&title=《Vue.Js 第一天》 — MrDust Blog&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.mrdust.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue.Js 第一天》 — MrDust Blog&url=http://blog.mrdust.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/&via=http://blog.mrdust.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.mrdust.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
     </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
   
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/09/16/Vue.Js%20%E7%AC%AC%E4%BA%8C%E5%A4%A9/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Vue.Js 第二天</h4>
+      </a>
+    </div>
+  
+
   
 </nav>
 
-  
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </article>
 
-</section>
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
         
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-Js/" rel="tag">Vue.Js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-Js-Vuex/" rel="tag">Vue.Js Vuex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%B2%E5%BA%A7%EF%BC%9B%E5%B0%B1%E4%B8%9A/" rel="tag">讲座；就业</a></li></ul>
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
     </div>
-  </div>
+</div>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Vue-Js/" style="font-size: 20px;">Vue.Js</a> <a href="/tags/Vue-Js-Vuex/" style="font-size: 10px;">Vue.Js Vuex</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 10px;">数据结构与算法</a> <a href="/tags/%E8%AE%B2%E5%BA%A7%EF%BC%9B%E5%B0%B1%E4%B8%9A/" style="font-size: 10px;">讲座；就业</a>
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
     </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+    <div class="bottom">
+        <p><span>MrDust &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
     </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/04/08/20200408/">20200408</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/11/vueX/">Vue.js学习笔记.VueX运用</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/30/1030%E5%B0%B1%E4%B8%9A%E8%AE%B2%E5%BA%A7/">10月30日就业知识讲座(萍乡学院音乐厅)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/26/%E7%AE%97%E6%B3%95-1-%E6%A0%88%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">算法-1- 栈的快速排序</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/24/Vue.Js%20%E7%AC%AC%E4%BA%94%E5%A4%A9--%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8/">Vue.Js 第五天--布局容器</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
 
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.mrdust.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/&title=《Vue.Js 第一天》 — MrDust Blog&pic=http://blog.mrdust.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.mrdust.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/&title=《Vue.Js 第一天》 — MrDust Blog&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.mrdust.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue.Js 第一天》 — MrDust Blog&url=http://blog.mrdust.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/&via=http://blog.mrdust.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.mrdust.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
 
-<script src="/js/script.js"></script>
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://blog.mrdust.com/2019/09/15/Vue.Js%20%E7%AC%AC%E4%B8%80%E5%A4%A9/" alt="微信分享二维码">
+</div>
 
 
 
 
-  </div>
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
 </body>
 </html>
