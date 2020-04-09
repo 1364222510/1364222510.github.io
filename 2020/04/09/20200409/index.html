@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>20200409 | MrDust Blog | love is love</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="saber开发（1）第一个CRUD1.添加新菜单页1—-&gt;新建VUE页面文件 2—-&gt;配置路由 12345678910111213141516&amp;#123;  &#x2F;&#x2F;根路由  path: &#39;&#x2F;desk&#39;,  &#x2F;&#x2F;重定向  redirect: &#39;&#x2F;desk&#x2F;test&#39;,  &#x2F;&#x2F;组件使用Layout布局  component: Layout,  &#x2F;&#x2F;配置显示多窗口标签页的内容  childre">
+<meta property="og:type" content="article">
+<meta property="og:title" content="20200409">
+<meta property="og:url" content="http://blog.mrdust.com/2020/04/09/20200409/index.html">
+<meta property="og:site_name" content="MrDust Blog">
+<meta property="og:description" content="saber开发（1）第一个CRUD1.添加新菜单页1—-&gt;新建VUE页面文件 2—-&gt;配置路由 12345678910111213141516&amp;#123;  &#x2F;&#x2F;根路由  path: &#39;&#x2F;desk&#39;,  &#x2F;&#x2F;重定向  redirect: &#39;&#x2F;desk&#x2F;test&#39;,  &#x2F;&#x2F;组件使用Layout布局  component: Layout,  &#x2F;&#x2F;配置显示多窗口标签页的内容  childre">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://blog.mrdust.com/2020/04/09/20200409/img/image-20200409114908779.png">
+<meta property="og:image" content="http://blog.mrdust.com/2020/04/09/20200409/img/image-20200409134950695.png">
+<meta property="article:published_time" content="2020-04-09T07:28:52.067Z">
+<meta property="article:modified_time" content="2020-04-09T07:28:30.641Z">
+<meta property="article:author" content="MrDust">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.mrdust.com/2020/04/09/20200409/img/image-20200409114908779.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="MrDust Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">MrDust</h5>
+          <a href="mailto:CWH_1364222510@163.com" title="CWH_1364222510@163.com" class="mail">CWH_1364222510@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">20200409</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">20200409</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-04-09T07:28:52.067Z" itemprop="datePublished" class="page-time">
+  2020-04-09
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#saber开发（1）第一个CRUD"><span class="post-toc-number">1.</span> <span class="post-toc-text">saber开发（1）第一个CRUD</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-添加新菜单页"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.添加新菜单页</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-配置webpack懒加载的代码提示"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2.配置webpack懒加载的代码提示</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-CURD"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3.CURD</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-批量删除"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">4.批量删除</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-1Computed"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">4.1Computed</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-2-Computed代码"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">4.2 Computed代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-3实现批量删除"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">4.3实现批量删除</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-20200409"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">20200409</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-04-09 15:28:52" datetime="2020-04-09T07:28:52.067Z"  itemprop="datePublished">2020-04-09</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="saber开发（1）第一个CRUD"><a href="#saber开发（1）第一个CRUD" class="headerlink" title="saber开发（1）第一个CRUD"></a>saber开发（1）第一个CRUD</h1><h2 id="1-添加新菜单页"><a href="#1-添加新菜单页" class="headerlink" title="1.添加新菜单页"></a>1.添加新菜单页</h2><p>1—-&gt;新建VUE页面文件</p>
+<p>2—-&gt;配置路由</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">//根路由</span></span><br><span class="line">  path: <span class="string">'/desk'</span>,</span><br><span class="line">  <span class="comment">//重定向</span></span><br><span class="line">  redirect: <span class="string">'/desk/test'</span>,</span><br><span class="line">  <span class="comment">//组件使用Layout布局</span></span><br><span class="line">  component: Layout,</span><br><span class="line">  <span class="comment">//配置显示多窗口标签页的内容</span></span><br><span class="line">  children: [&#123;</span><br><span class="line">    path: <span class="string">"test"</span>,</span><br><span class="line">    name: <span class="string">"testPage"</span>,</span><br><span class="line">    <span class="comment">//具体显示的是什么页面。</span></span><br><span class="line">    component: <span class="function"><span class="params">()</span> =&gt;</span></span><br><span class="line">      <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: "views" */</span> <span class="string">'@/views/blog/blog'</span>)</span><br><span class="line">  &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3—-&gt;在系统里配置页面（菜单管理）</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="img\image-20200409114908779.png" alt="image-20200409114908779" title="">
+                </div>
+                <div class="image-caption">image-20200409114908779</div>
+            </figure>
+
+<blockquote>
+<p>新增页面 具体参考《saber开发手册》</p>
+</blockquote>
+<h2 id="2-配置webpack懒加载的代码提示"><a href="#2-配置webpack懒加载的代码提示" class="headerlink" title="2.配置webpack懒加载的代码提示"></a>2.配置webpack懒加载的代码提示</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="img\image-20200409134950695.png" alt="image-20200409134950695" title="">
+                </div>
+                <div class="image-caption">image-20200409134950695</div>
+            </figure>
+
+<p>把webpack的配置文件指向本项目的webpack的配置文件。</p>
+<h2 id="3-CURD"><a href="#3-CURD" class="headerlink" title="3.CURD"></a>3.CURD</h2><p>新增页面的按钮触发一个属性（formVisible）改为true显示dialog，其他出现修改页面的情况相同。新增页面的代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-dialog :title&#x3D;&quot;dialogTitle&quot; width&#x3D;&quot;600px&quot; :visible.sync&#x3D;&quot;formVisible&quot; @close&#x3D;&quot;resetForm(&#39;blogForm&#39;) &quot; append-to-body&gt;</span><br><span class="line">      &lt;!--append-to-body 解决之前页面全变黑--&gt;</span><br><span class="line">      &lt;el-form :model&#x3D;&quot;blog&quot; :rules&#x3D;&quot;rules&quot; ref&#x3D;&quot;blogForm&quot;&gt;</span><br><span class="line">        &lt;el-form-item label&#x3D;&quot;标题&quot; prop&#x3D;&quot;title&quot; label-width&#x3D;&quot;55px&quot;&gt;</span><br><span class="line">          &lt;el-input v-model&#x3D;&quot;blog.title&quot; autocomplete&#x3D;&quot;off&quot;&gt;&lt;&#x2F;el-input&gt;</span><br><span class="line">        &lt;&#x2F;el-form-item&gt;</span><br><span class="line">        &lt;el-form-item label&#x3D;&quot;时间&quot; label-width&#x3D;&quot;55px&quot;&gt;</span><br><span class="line">          &lt;el-date-picker</span><br><span class="line">            v-model&#x3D;&quot;blog.time&quot;</span><br><span class="line">            style&#x3D;&quot;width: 100%;&quot;</span><br><span class="line">            type&#x3D;&quot;date&quot;</span><br><span class="line">            value-format&#x3D;&quot;yyyy-MM-dd&quot;</span><br><span class="line">            placeholder&#x3D;&quot;选择日期&quot;</span><br><span class="line">            autocomplete&#x3D;&quot;off&quot;&gt;</span><br><span class="line">          &lt;&#x2F;el-date-picker&gt;</span><br><span class="line">        &lt;&#x2F;el-form-item&gt;</span><br><span class="line">        &lt;el-form-item label&#x3D;&quot;内容&quot; label-width&#x3D;&quot;55px&quot;&gt;</span><br><span class="line">          &lt;el-input v-model&#x3D;&quot;blog.content&quot; autocomplete&#x3D;&quot;off&quot; type&#x3D;&quot;textarea&quot; :rows&#x3D;&quot;5&quot;&gt;&lt;&#x2F;el-input&gt;</span><br><span class="line">        &lt;&#x2F;el-form-item&gt;</span><br><span class="line">      &lt;&#x2F;el-form&gt;</span><br><span class="line">      &lt;div slot&#x3D;&quot;footer&quot; class&#x3D;&quot;dialog-footer&quot;&gt;</span><br><span class="line">        &lt;el-button @click&#x3D;&quot;formVisible &#x3D; false&quot;&gt;取 消&lt;&#x2F;el-button&gt;</span><br><span class="line"></span><br><span class="line">        &lt;el-button v-if&#x3D;&quot;viewMode&quot; type&#x3D;&quot;primary&quot; @click&#x3D;&quot;submitBlog(&#39;blogForm&#39;)&quot;&gt;确 定&lt;&#x2F;el-button&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-dialog&gt;</span><br></pre></td></tr></table></figure>
+
+<p>显示不同的dialog可以使用两种方式控制：</p>
+<p>1： dialog的固定属性 例如：title、width、fullscreen、top等等详细参看element的开发文档。在触发这个dialog的方法中赋值，实现dialog代码的复用。</p>
+<p>2： 运用Vue指令 <code>v-if</code> 在触发dialog的方法中控制v-if中的状态码。</p>
+<p>以下为实现了CURD的不同实现：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">handleAdd() &#123;</span><br><span class="line">  <span class="keyword">this</span>.formVisible = <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">this</span>.dialogTitle = <span class="string">"新增博客"</span>;</span><br><span class="line">  <span class="keyword">this</span>.viewMode = <span class="literal">true</span>;</span><br><span class="line">&#125;,</span><br><span class="line">handleView(index, row) &#123;</span><br><span class="line">  <span class="keyword">this</span>.formVisible = <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">this</span>.dialogTitle = <span class="string">"查看博客"</span>;</span><br><span class="line">  <span class="keyword">this</span>.viewMode = <span class="literal">false</span>;</span><br><span class="line">  getDetail(row.id).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (res.data.success) &#123;</span><br><span class="line">      <span class="keyword">this</span>.blog = res.data.data;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;,</span><br><span class="line">handleEdit(index, row) &#123;</span><br><span class="line">  <span class="keyword">this</span>.formVisible = <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">this</span>.dialogTitle = <span class="string">"编辑博客"</span>;</span><br><span class="line">  <span class="keyword">this</span>.viewMode = <span class="literal">true</span>;</span><br><span class="line">  getDetail(row.id).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (res.data.success) &#123;</span><br><span class="line">      <span class="keyword">this</span>.blog = res.data.data;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;,</span><br><span class="line">handleDelete(index, row) &#123;</span><br><span class="line">  <span class="keyword">this</span>.$confirm(<span class="string">"确定将选择数据删除?"</span>, &#123;</span><br><span class="line">    confirmButtonText: <span class="string">"确定"</span>,</span><br><span class="line">    cancelButtonText: <span class="string">"取消"</span>,</span><br><span class="line">    type: <span class="string">"warning"</span></span><br><span class="line">  &#125;).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      remove(row.id).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (res.data.success) &#123;</span><br><span class="line">          <span class="keyword">this</span>.onLoad();</span><br><span class="line">          <span class="keyword">this</span>.$message(&#123;</span><br><span class="line">            type: <span class="string">'success'</span>,</span><br><span class="line">            message: <span class="string">'操作成功！'</span></span><br><span class="line">          &#125;)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">this</span>.$message(&#123;</span><br><span class="line">            type: <span class="string">'error'</span>,</span><br><span class="line">            message: res.data.msg</span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-批量删除"><a href="#4-批量删除" class="headerlink" title="4.批量删除"></a>4.批量删除</h2><h3 id="4-1Computed"><a href="#4-1Computed" class="headerlink" title="4.1Computed"></a>4.1Computed</h3><p>当其<strong>依赖的属性的值</strong>发生变化时，计算属性会重新计算，反之，则使用缓存中的属性值。</p>
+<h3 id="4-2-Computed代码"><a href="#4-2-Computed代码" class="headerlink" title="4.2 Computed代码"></a>4.2 Computed代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">  ids() &#123;</span><br><span class="line">    <span class="keyword">let</span> ids = [];</span><br><span class="line">    <span class="keyword">this</span>.multiSelection.forEach(<span class="function"><span class="params">ele</span> =&gt;</span> &#123;</span><br><span class="line">      ids.push(ele.id);</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> ids.join(<span class="string">","</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>定义了一个computed方法ids，其中需要遍历的属性是let ids，其中multiSelection是多选栏的数组，遍历以后返回ids得以遍历ids。</p>
+<h3 id="4-3实现批量删除"><a href="#4-3实现批量删除" class="headerlink" title="4.3实现批量删除"></a>4.3实现批量删除</h3><p>多选框：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-table</span><br><span class="line">  :data&#x3D;&quot;data&quot;</span><br><span class="line">  @selection-change&#x3D;&quot;selectChange&quot;</span><br><span class="line">  style&#x3D;&quot;width: 100%&quot;&gt;</span><br><span class="line">    &lt;!--</span><br><span class="line">            第一行是用来控制多选</span><br><span class="line">    --&gt;</span><br><span class="line">  &lt;el-table-column</span><br><span class="line">    prop&#x3D;&quot;id&quot;</span><br><span class="line">    type&#x3D;&quot;selection&quot;</span><br><span class="line">    width&#x3D;&quot;55&quot;&gt;</span><br><span class="line">  &lt;&#x2F;el-table-column&gt;</span><br><span class="line">  &lt;el-table-column</span><br><span class="line">    prop&#x3D;&quot;title&quot;</span><br><span class="line">    label&#x3D;&quot;标题&quot;</span><br><span class="line">    width&#x3D;&quot;180&quot;&gt;</span><br><span class="line">  &lt;&#x2F;el-table-column&gt;</span><br><span class="line">  &lt;el-table-column</span><br><span class="line">    prop&#x3D;&quot;content&quot;</span><br><span class="line">    label&#x3D;&quot;内容&quot;&gt;</span><br><span class="line">  &lt;&#x2F;el-table-column&gt;</span><br><span class="line">  &lt;el-table-column</span><br><span class="line">    prop&#x3D;&quot;time&quot;</span><br><span class="line">    label&#x3D;&quot;日期&quot;</span><br><span class="line">    width&#x3D;&quot;180&quot;&gt;</span><br><span class="line">  &lt;&#x2F;el-table-column&gt;</span><br><span class="line">  &lt;el-table-column label&#x3D;&quot;操作&quot; fixed&#x3D;&quot;right&quot; width&#x3D;&quot;250&quot;&gt;</span><br><span class="line">    &lt;template slot-scope&#x3D;&quot;scope&quot;&gt;</span><br><span class="line">      &lt;el-button</span><br><span class="line">        size&#x3D;&quot;mini&quot;</span><br><span class="line">        type&#x3D;&quot;&quot;</span><br><span class="line">        plain</span><br><span class="line">        @click&#x3D;&quot;handleView(scope.$index, scope.row)&quot;&gt;查看</span><br><span class="line">      &lt;&#x2F;el-button&gt;</span><br><span class="line">      &lt;el-button</span><br><span class="line">        size&#x3D;&quot;mini&quot;</span><br><span class="line">        type&#x3D;&quot;primary&quot;</span><br><span class="line">        plain</span><br><span class="line">        @click&#x3D;&quot;handleEdit(scope.$index, scope.row)&quot;&gt;编辑</span><br><span class="line">      &lt;&#x2F;el-button&gt;</span><br><span class="line">      &lt;el-button</span><br><span class="line">        size&#x3D;&quot;mini&quot;</span><br><span class="line">        type&#x3D;&quot;danger&quot;</span><br><span class="line">        @click&#x3D;&quot;handleDelete(scope.$index, scope.row)&quot;&gt;删除</span><br><span class="line">      &lt;&#x2F;el-button&gt;</span><br><span class="line">    &lt;&#x2F;template&gt;</span><br><span class="line">  &lt;&#x2F;el-table-column&gt;</span><br><span class="line">&lt;&#x2F;el-table&gt;</span><br></pre></td></tr></table></figure>
+
+<p>逻辑控制：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">handleMultiDelete() &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"multi-delete"</span>);</span><br><span class="line">  <span class="comment">//multiSelection这是选中的id的数组</span></span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.multiSelection.length === <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">this</span>.$message.warning(<span class="string">"请选择至少一条数据"</span>);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">this</span>.$confirm(<span class="string">"确定将选择数据删除?"</span>, &#123;</span><br><span class="line">    confirmButtonText: <span class="string">"确定"</span>,</span><br><span class="line">    cancelButtonText: <span class="string">"取消"</span>,</span><br><span class="line">    type: <span class="string">"warning"</span></span><br><span class="line">  &#125;).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      remove(<span class="keyword">this</span>.ids).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (res.data.success) &#123;</span><br><span class="line">          <span class="keyword">this</span>.onLoad();</span><br><span class="line">          <span class="keyword">this</span>.$message(&#123;</span><br><span class="line">            type: <span class="string">'success'</span>,</span><br><span class="line">            message: <span class="string">'操作成功！'</span></span><br><span class="line">          &#125;)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">this</span>.$message(&#123;</span><br><span class="line">            type: <span class="string">'error'</span>,</span><br><span class="line">            message: res.data.msg</span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2020-04-09T07:28:30.641Z" itemprop="dateUpdated">2020-04-09 15:28:30</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2020/04/09/20200409/" target="_blank" rel="external">http://blog.mrdust.com/2020/04/09/20200409/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://blog.mrdust.com">
+            <img src="/img/avatar.jpg" alt="MrDust">
+            MrDust
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.mrdust.com/2020/04/09/20200409/&title=《20200409》 — MrDust Blog&pic=http://blog.mrdust.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.mrdust.com/2020/04/09/20200409/&title=《20200409》 — MrDust Blog&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.mrdust.com/2020/04/09/20200409/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《20200409》 — MrDust Blog&url=http://blog.mrdust.com/2020/04/09/20200409/&via=http://blog.mrdust.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.mrdust.com/2020/04/09/20200409/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/04/08/20200408/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">20200408</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/false" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>MrDust &copy; 2019 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.mrdust.com/2020/04/09/20200409/&title=《20200409》 — MrDust Blog&pic=http://blog.mrdust.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.mrdust.com/2020/04/09/20200409/&title=《20200409》 — MrDust Blog&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.mrdust.com/2020/04/09/20200409/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《20200409》 — MrDust Blog&url=http://blog.mrdust.com/2020/04/09/20200409/&via=http://blog.mrdust.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.mrdust.com/2020/04/09/20200409/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://blog.mrdust.com/2020/04/09/20200409/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
